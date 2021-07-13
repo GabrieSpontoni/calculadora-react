@@ -1,9 +1,9 @@
 import React from 'react'
-import './Display.css'
+import './Foot.css'
 // eslint-disable-next-line
 export default (props) => {
     return (
-        <div className='display'>{props.value}</div>
+        <footer className='foot'>Feito por Gabriel Spontoni</footer>
     )
-}
 
+}

@@ -1,9 +1,18 @@
 import React from 'react'
 import './Button.css'
-
-export default (prop) => {
+// eslint-disable-next-line
+export default (props) => {
     return (
-        <button className = 'button'>{prop.label}</button>
+        <button 
+            onClick = {e => props.click && props.click(props.label)} 
+            className ={`
+                button
+                ${props.operation ? 'operation' : ''}
+                ${props.double ? 'double' : ''}
+                ${props.triple ? 'triple' : ''}
+            `}>
+            {props.label}
+        </button>
         
     )
 }
